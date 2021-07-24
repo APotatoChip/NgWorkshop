@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ITheme } from '../interfaces';
+import { ITheme } from 'src/app/shared/interfaces';
 import { ThemeService } from '../theme.service';
 
 @Component({

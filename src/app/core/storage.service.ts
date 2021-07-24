@@ -1,4 +1,4 @@
-import { Injectable,Provider,PLATFORM_ID } from '@angular/core';
+import { Provider,PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser,isPlatformServer } from '@angular/common';
 
 interface IStorage{
