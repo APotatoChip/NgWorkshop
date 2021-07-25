@@ -6,16 +6,24 @@ import { ThemeListItemComponent } from './theme-list-item/theme-list-item.compon
 import { ThemeService } from './theme.service';
 import { ThemeRouterModule } from './theme-routing.module';
 import { DetailComponent } from './detail/detail.component';
+import { SharedModule } from '../shared/shared.module';
+import { NewThemeComponent } from './new-theme/new-theme.component';
+import { ThemeComponent } from './theme/theme.component';
+import { AsideComponent } from '../shared/aside/aside.component';
 
 
 @NgModule({
   declarations: [
     ThemeListComponent,
     ThemeListItemComponent,
-    DetailComponent
+    DetailComponent,
+    NewThemeComponent,
+    ThemeComponent,
+    AsideComponent
   ],
   imports: [
     CommonModule,
+    SharedModule,
     ThemeRouterModule,
    
   ], 
@@ -24,7 +32,8 @@ ThemeService
   ],
   exports:[
     ThemeListComponent,
-    ThemeListItemComponent
+    ThemeListItemComponent,
+    AsideComponent
   ]
 })
 export class ThemeModule { }

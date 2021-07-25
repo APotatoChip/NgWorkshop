@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { ITheme } from '../shared/interfaces';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { IPost } from '../shared/interfaces/post';
 
 const apiUrl=environment.apiUrl;
 
@@ -16,7 +17,7 @@ export class ThemeService {
     return this.http.get<ITheme[]>(`${apiUrl}/themes`);
   }
 
-  loadTheme(id:string):Observable<ITheme>{
-    return this.http.get<ITheme>(`${apiUrl}/themes/${id}`);
+  loadTheme(id:string):Observable<ITheme<IPost>>{
+    return this.http.get<ITheme<IPost>>(`${apiUrl}/themes/${id}`);
   }
 }

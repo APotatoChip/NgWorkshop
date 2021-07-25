@@ -13,12 +13,13 @@ export class DetailComponent implements OnInit {
 
   theme!:ITheme<IPost>;
 
-  constructor(
-    private activatedRoute:ActivatedRoute,
-    private themeService:ThemeService
+  constructor(themeService:ThemeService,
+     activatedRoute:ActivatedRoute
     ) { 
       const id = activatedRoute.snapshot.params.id;
-        this.themeService.loadTheme(id);
+       themeService.loadTheme(id).subscribe(theme=>{
+         this.theme=theme;
+       });
   }
 
   ngOnInit(): void {
