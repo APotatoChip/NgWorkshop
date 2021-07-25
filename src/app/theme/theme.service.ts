@@ -15,4 +15,8 @@ export class ThemeService {
   loadThemeList():Observable<ITheme[]>{
     return this.http.get<ITheme[]>(`${apiUrl}/themes`);
   }
+
+  loadTheme(id:string):Observable<ITheme>{
+    return this.http.get<ITheme>(`${apiUrl}/themes/${id}`);
+  }
 }
