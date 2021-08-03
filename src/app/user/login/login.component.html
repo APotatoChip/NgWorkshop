@@ -27,7 +27,7 @@
                 Password must be at least 4 characters!
             </p>
 
-            <button [disabled]="f.invalid">Login</button>
+            <button [disabled]="isLoading || f.invalid">Login</button>
             <app-loader [isLoading]="isLoading"></app-loader>
 
             <p class="text-center">

@@ -9,7 +9,7 @@ import { UserService } from 'src/app/user/user.service';
 export class HeaderComponent  {
 
   get isLogged():boolean{
-    return this.userService.isLogged;
+  return this.userService.isLogged;
   }
 
   constructor(public userService:UserService) { }

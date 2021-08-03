@@ -14,7 +14,7 @@ export class ThemeService {
   constructor(private http:HttpClient) { }
 
   loadThemeList():Observable<ITheme[]>{
-    return this.http.get<ITheme[]>(`${apiUrl}/themes`);
+    return this.http.get<ITheme[]>(`${apiUrl}/themes`,{withCredentials:true});
   }
 
   loadTheme(id:string):Observable<ITheme<IPost>>{
